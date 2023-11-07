@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast App</title>
+</head>
+<body>
+    <h1>Podcast Library</h1>
+    <ul>
+        {% for podcast in podcasts %}
+            <li>
+                <strong>{{ podcast.title }}</strong>
+                <p>Hosted by: {{ podcast.host }}</p>
+                <p>{{ podcast.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
